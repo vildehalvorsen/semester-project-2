@@ -1,0 +1,15 @@
+@import url(./global.css);
+.fa-spinner {
+    font-size: 2.2em;
+    color: rgb(0, 0, 0);
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

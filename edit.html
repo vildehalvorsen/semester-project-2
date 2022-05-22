@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Edit">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/292441d70e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="data:;base64">
+    <link href="/css/edit.css" rel="stylesheet">
+    <title>Edit</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu"></div>
+    </header>
+
+    <main>
+        <h1>Manage</h1>
+
+        <div class="product">
+            <div class="message-container"></div>
+
+            <form>
+                <div>
+                    <input type="text" class="form-control" id="id" hidden>
+                </div>
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title">
+                </div>
+
+                <div class="mb-3 col-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price">
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" placeholder="..."></textarea>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="imageUpload" class="form-label">Upload image</label>
+                    <div class="col-10">
+                        <input class="form-control" type="file" id="imageUpload">
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary" id="clearFile">Clear</button>
+                    </div>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="featured">
+                    <label class="form-check-label" for="featured">Is the product featured?</label>
+                </div>
+                <button type="submit" class="btn btn-primary" id="updateBtn">Update</button>
+            </form>
+
+            <div>
+                <button type="submit" class="btn btn-danger" id="deleteBtn">Delete</button>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="js/edit.js" type="module"></script>
+</body>
+
+</html>
