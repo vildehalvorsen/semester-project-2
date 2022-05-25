@@ -7,7 +7,7 @@ export async function getHeroBanner() {
         const response = await fetch(homeUrl);
         const results = await response.json();
 
-        bannerContainer.innerHTML += `<img src="${apiUrl}${results.hero_banner.url}" class="img-fluid" alt="${results.hero_banner.alternativeText}">`
+        bannerContainer.innerHTML += `<img src="${apiUrl}${results.hero_banner.url}" alt="${results.hero_banner.alternativeText}">`
 
     } catch (error) {
         console.log(error);

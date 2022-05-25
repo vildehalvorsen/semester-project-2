@@ -1,0 +1,27 @@
+.logIn {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
+    padding: 20px;
+    form {
+        width: 250px;
+        margin: 0 auto;
+        input {
+            margin: 15px auto;
+        }
+        #usernameError,
+        #passwordError {
+            display: none;
+            margin: -10px auto 10px;
+            color: $error-color;
+            font-size: .9em;
+        }
+    }
+    .btn__container {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+}

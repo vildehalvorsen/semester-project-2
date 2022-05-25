@@ -4,6 +4,7 @@ import { getToken } from "../../../utils/storage.js";
 import { deleteFromCart } from "./updateCartFunctions.js";
 
 export function deleteProduct(id) {
+
     const button = document.querySelector("#deleteBtn");
 
     button.onclick = async function() {
@@ -12,7 +13,6 @@ export function deleteProduct(id) {
 
         if (confirmDelete) {
             const url = productsUrl + id;
-
             const token = getToken();
 
             const options = {
@@ -29,9 +29,10 @@ export function deleteProduct(id) {
                 deleteFromCart(id);
 
                 location.href = "/admin.html";
+
             } catch (error) {
                 console.log(error);
-                displayMessage("alert-danger", "Something went wrong. Please try again.", ".message-container");
+                displayMessage("error", "Something went wrong. Please try again.", ".message-container");
             }
         }
     }

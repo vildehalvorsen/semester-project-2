@@ -30,7 +30,7 @@ export async function submitLogin(username, password) {
         }
 
         if (json.error) {
-            displayMessage("alert-danger", "Invalid username or password", ".message");
+            displayMessage("error", "Invalid username or password", ".message-container");
         }
 
     } catch (error) {

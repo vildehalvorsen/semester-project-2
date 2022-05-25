@@ -6,27 +6,42 @@ export default function createMenu() {
 
     const username = getUser();
 
-    let userLink = `<a href="/logIn.html" class="nav-link mx-4 ${pathname === "/logIn.html" ? "active" : ""}"><i class="fa-solid fa-user"></i></a>`;
+    let userLink = `<a href="/logIn.html" class="${pathname === "/logIn.html" ? "active" : ""}"><i class="fa-solid fa-user"></i></a>`;
 
     if (username) {
-        userLink = `<a href="/admin.html" class="nav-link mx-4 ${pathname === "/admin.html"  || pathname === "/edit.html" ? "active" : ""}"><i class="fa-solid fa-user"></i> ${username}</a>`;
+        userLink = `<a href="/admin.html" class="${pathname === "/admin.html"  || pathname === "/edit.html" ? "active" : ""}"><i class="fa-solid fa-user"></i> ${username}</a>`;
     }
 
     const menuContainer = document.querySelector(".menu");
-    menuContainer.innerHTML = `<nav class="navbar navbar-expand-md navbar-light bg-light">
-                                    <div class="container-fluid">
-                                        <a class="navbar-brand" href="/">BRAND</a>
-                                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                  </button>
-                                        <div class="collapse navbar-collapse justify-content-md-end" id="navbarNavAltMarkup">
-                                            <div class="navbar-nav">
-                                                <a href="/" class="nav-link mx-4 ${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
-                                                <a href="/products.html" class="nav-link mx-4 ${pathname === "/products.html" ? "active" : ""}">Products</a>
-                                                ${userLink}
-                                                <a href="/cart.html" class="nav-link mx-4 ${pathname === "/cart.html" ? "active" : ""}"><i class="fa-solid fa-cart-shopping"></i></a>
-                                            </div>
-                                        </div>
+    menuContainer.innerHTML = `<div class="menu__logo">
+                                    <a href="/">BRAND</a>
+                                </div>
+                                
+                                <div class=""menu__nav-open>
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                
+                                <nav>
+                                    <div class="menu__nav--exit">
+                                        <i class="fa-solid fa-xmark"></i>
                                     </div>
-                                </nav>`
+                                    <div class="menu__nav--links">
+                                        <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
+                                        <a href="/products.html" class="${pathname === "/products.html" || pathname === "/products-details.html" ? "active" : ""}">Products</a>
+                                        ${userLink}
+                                        <a href="/cart.html" class="${pathname === "/cart.html" ? "active" : ""}"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </div>
+                                </nav>`;
+
+    const openMenu = document.querySelector(".fa-bars");
+    const exitMenu = document.querySelector(".fa-xmark");
+    const menu = document.querySelector("nav");
+
+    openMenu.onclick = function() {
+        menu.style.display = "block";
+    }
+    exitMenu.onclick = function() {
+        menu.style.display = "none";
+    }
+
 }

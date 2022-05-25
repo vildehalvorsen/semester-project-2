@@ -6,12 +6,21 @@ export function createHtml(results) {
 
 
     for (let i = 0; i < results.length; i++) {
-        productsContainer.innerHTML += `<a href="/products-details.html?id=${results[i].id}" class="card" style="width: 18rem;">
-                                                          <img src="${apiUrl}${results[i].image.url}" class="card-img-top" alt="${results[i].image.alternativeText}">
-                                                          <div class="card-body">
-                                                              <h5 class="card-title">${results[i].title}</h5>
-                                                              <p class="card-text">${results[i].price}</p>
-                                                          </div>
-                                                      </a>`;
+        let imageUrl = `${apiUrl}${results[i].image.url}`;
+
+        if (imageUrl === "http://localhost:1337undefined") {
+            imageUrl = `/image/AdobeStock_308675144-[Converted].jpg`;
+        }
+
+        productsContainer.innerHTML += `<a href="/products-details.html?id=${results[i].id}">
+                                            <div class="products__item">
+                                                <img src="${imageUrl}" alt="${results[i].image.alternativeText}">
+                                                <div class="products__item--info">
+                                                    <h3>${results[i].title}</h3>
+                                                    <p>$ ${results[i].price}</p>
+                                                </div>
+                                            </div>
+                                        </a>`;
     }
+
 }

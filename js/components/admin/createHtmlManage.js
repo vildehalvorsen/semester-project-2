@@ -5,13 +5,19 @@ export function createHtmlManage(results) {
     productsContainer.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-        productsContainer.innerHTML += `<div class="card" style="width: 10rem;">
-                                              <img src="${apiUrl}${results[i].image.url}" class="card-img-top" alt="${results[i].image.alternativeText}">
-                                              <div class="card-body">
-                                                  <h5 class="card-title">${results[i].title}</h5>
-                                                  <p class="card-text">${results[i].price}</p>
-                                              </div>
-                                              <a href="/edit.html?id=${results[i].id}" class="btn btn-primary">Edit</a>
-                                          </div>`;
+        let imageUrl = `${apiUrl}${results[i].image.url}`;
+        const imageAlt = `${results[i].image.alternativeText}`;
+
+        if (imageUrl === "http://localhost:1337undefined") {
+            imageUrl = `/image/AdobeStock_308675144-[Converted].jpg`;
+        }
+
+        productsContainer.innerHTML += `<a href="/edit.html?id=${results[i].id}" class="products__item">
+                                            <img src="${imageUrl}" alt="${imageAlt}"></img>                                   
+                                            <div class="products__item--info">
+                                                <h3>${results[i].title}</h3>
+                                                <p>$ ${results[i].price}</p>
+                                             </div>
+                                        </a>`;
     }
 }

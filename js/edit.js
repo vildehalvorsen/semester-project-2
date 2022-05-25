@@ -25,7 +25,7 @@ form.addEventListener("submit", submitUpdate);
     const price = document.querySelector("#price");
     const description = document.querySelector("#description");
     const featured = document.querySelector("#featured");
-    // const image = document.querySelector("#imageUpload");
+    const image = document.querySelector("#imageUrl");
 
     try {
         const response = await fetch(url);
@@ -37,7 +37,7 @@ form.addEventListener("submit", submitUpdate);
         price.value = details.price;
         description.value = details.description;
         featured.checked = details.featured;
-        // image.value = "";
+        image.value = details.image.url;
 
         idInfo.value = details.id;
 

@@ -1,0 +1,22 @@
+.message-container {
+    text-align: center;
+    margin: 10px auto;
+    .success {
+        background-color: lighten($success-color, 30%);
+        border: 2px solid $success-color;
+        border-radius: 3px;
+        padding: 10px;
+    }
+    .warning {
+        background-color: lighten($warning-color, 20%);
+        border: 2px solid $warning-color;
+        border-radius: 3px;
+        padding: 10px;
+    }
+    .error {
+        background-color: lighten($error-color, 20%);
+        border: 2px solid $error-color;
+        border-radius: 3px;
+        padding: 10px;
+    }
+}

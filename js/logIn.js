@@ -4,5 +4,5 @@ import { validateLogin } from "./components/logIn/validateLogin.js";
 
 createMenu();
 
-const form = document.querySelector("#login");
+const form = document.querySelector("form");
 form.addEventListener("submit", validateLogin);

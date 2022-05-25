@@ -4,13 +4,12 @@ import { getToken } from "../../../utils/storage.js";
 import { updateCartStorage } from "./updateCartFunctions.js";
 
 
-export async function updateProduct(id, title, price, description, featured, image) {
+export async function updateProduct(id, title, price, description, featured) {
     const url = productsUrl + id;
     const data = JSON.stringify({
         title: title,
         price: price,
         description: description,
-        image: image,
         featured: featured
     });
 
@@ -30,10 +29,10 @@ export async function updateProduct(id, title, price, description, featured, ima
 
         const response = await fetch(url, options);
         const json = await response.json();
-
+        console.log(json);
         if (json.updated_at) {
-            updateCartStorage(id, title, price, image)
-            displayMessage("alert-success", `Successfully updated`, ".message-container");
+            updateCartStorage(id, title, price)
+            displayMessage("success", `Successfully updated`, ".message-container");
 
             setTimeout(function() {
                 messageContainer.innerHTML = "";
@@ -42,6 +41,6 @@ export async function updateProduct(id, title, price, description, featured, ima
         }
     } catch (error) {
         console.log(error);
-        displayMessage("alert-danger", "Something went wrong. Please try again.", ".message-container");
+        displayMessage("error", "Something went wrong. Please try again.", ".message-container");
     }
 }

@@ -1,10 +1,10 @@
 import { getFromStorage, saveToStorage } from "../../../utils/storage.js";
 
-export function updateCartStorage(id, title, price, image) {
+export function updateCartStorage(id, title, price) {
     const currentList = getFromStorage("cart");
     const newList = currentList.map(function(product) {
         if (product.id === id) {
-            return {...product, title: title, price: price, image: image };
+            return {...product, title: title, price: price };
         }
         return product;
     });

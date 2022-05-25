@@ -8,6 +8,7 @@ export function submitNewProduct() {
     const price = document.querySelector("#price");
     const description = document.querySelector("#description");
     const featured = document.querySelector("#featured");
+    const image = document.querySelector("#imageUrl");
     const messageContainer = document.querySelector(".message-container");
 
     messageContainer.innerHTML = "";
@@ -16,15 +17,19 @@ export function submitNewProduct() {
     const priceValue = price.value.trim();
     const descriptionValue = description.value.trim();
     const featuredValue = featured.checked;
-    const imageValue = "test.jpg";
+    let imageValue = image.value.trim();
+
+    if (!imageValue) {
+        imageValue = "placeholder.jpg";
+    }
 
     if (titleValue.length === 0 || priceValue.length === 0) {
-        return displayMessage("alert-warning", "Title and price are required", ".message-container");
+        return displayMessage("warning", "Title and price are required", ".message-container");
     }
 
     if (titleValue.length < 2) {
-        return displayMessage("alert-warning", "Title must be more than 2 characters", ".message-container");
+        return displayMessage("warning", "Title must be more than 2 characters", ".message-container");
     }
 
-    addNewProduct(titleValue, parseInt(priceValue), descriptionValue, imageValue, featuredValue);
+    addNewProduct(titleValue, parseInt(priceValue), descriptionValue, featuredValue, imageValue);
 }

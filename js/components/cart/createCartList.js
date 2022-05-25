@@ -10,25 +10,31 @@ export function createCartList() {
     productsContainer.innerHTML = "";
 
     if (products.length === 0) {
-        productsContainer.innerHTML = `<p>There are currently no items in your cart...</p>`;
+        productsContainer.innerHTML = `<p>There are currently no items in your cart...</p>
+                                        <a href="/products.html" class="button">Go shopping!</a>`;
     }
 
     products.forEach(product => {
+        let imageUrl = `${apiUrl}${product.image}`;
+
+        if (imageUrl === "http://localhost:1337undefined") {
+            imageUrl = `/image/AdobeStock_308675144-[Converted].jpg`;
+        }
         productsContainer.innerHTML += `<div class="cart__item">
                                         <div class="cart__item--info">
                                             <div>
-                                                <img src="${apiUrl + product.image}" alt="${product.altText}" style="width: 200px">
+                                                <img src="${imageUrl}" alt="${product.title}">
                                             </div>
-                                            <div>
+                                            <div class="cart__item--link">
                                                 <h4>${product.title}</h4>
                                                 <a href="/products-details.html?id=${product.id}">View product</a>
                                             </div>
-                                            <div>
+                                            <div class="cart__item--price">
                                                 <h4>$ ${product.price}</h4>
                                             </div>
-                                        </div>
-                                        <div class="cart__item--delete">
-                                            <i class="fa-solid fa-trash-can" data-id=${product.id}></i>
+                                            <div class="cart__item--delete">
+                                                <i class="fa-solid fa-trash-can" data-id=${product.id}></i>
+                                            </div>
                                         </div>
                                     </div>`;
     });
@@ -55,8 +61,10 @@ function createSummary() {
         const price = JSON.parse(products[i].price);
         total += price;
 
-        productsInfo.innerHTML += `<p>${products[i].title}</p>
-                                   <p>${products[i].price}</p>`;
+        productsInfo.innerHTML += `<div class="products__info">
+                                        <p>${products[i].title}</p>
+                                        <p>$ ${products[i].price}</p>
+                                    </div>`;
 
         totalInfo.innerHTML = `<p>Total: $${total}</p>`;
     }

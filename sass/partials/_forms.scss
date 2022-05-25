@@ -1,0 +1,56 @@
+label {
+    display: block;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 250px;
+    padding: 10px;
+    &:focus {
+        border: 3px solid $secondary-color;
+        outline: none;
+    }
+}
+
+textarea {
+    height: 100px;
+}
+
+//Admin - Add/edit Product
+.isFeatured {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    input {
+        display: none;
+        cursor: pointer;
+        &:checked~.checkbox {
+            background-color: rgb(124, 255, 124);
+            &::after {
+                content: "Yes";
+            }
+            &:hover {
+                background-color: rgb(182, 255, 182);
+            }
+        }
+    }
+    .checkbox {
+        height: 30px;
+        width: 40px;
+        border: 2px solid black;
+        border-radius: 3px;
+        background-color: rgb(177, 177, 177);
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+        &::after {
+            content: "No";
+        }
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}

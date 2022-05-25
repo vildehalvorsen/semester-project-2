@@ -10,7 +10,7 @@ export function validateLogin() {
     const usernameError = document.querySelector("#usernameError");
     const passwordError = document.querySelector("#passwordError");
 
-    const messageContainer = document.querySelector(".message");
+    const messageContainer = document.querySelector(".message-container");
     messageContainer.innerHTML = "";
 
     const usernameValue = username.value.trim();
@@ -29,7 +29,7 @@ export function validateLogin() {
     }
 
     if (usernameValue.length === 0 || passwordValue.length === 0) {
-        displayMessage("alert-warning", "Please fill in username and password", ".message");
+        displayMessage("warning", "Please fill in username and password", ".message-container");
     }
 
     if (checkEmail(usernameValue) && checkLength(passwordValue, 5)) {

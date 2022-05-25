@@ -1,0 +1,16 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    animation: loader 1s linear infinite;
+    .fa-spinner {
+        font-size: 2.5em;
+        color: $secondary-color;
+    }
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}

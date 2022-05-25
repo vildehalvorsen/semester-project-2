@@ -3,14 +3,14 @@ import { getToken } from "../../utils/storage.js";
 import { productsUrl } from "../../settings/api.js";
 import { displayProducts } from "../../admin.js";
 
-export async function addNewProduct(title, price, description, image, featured) {
+export async function addNewProduct(title, price, description, featured, image) {
 
     const data = JSON.stringify({
         title: title,
         price: price,
         description: description,
-        image: image,
-        featured: featured
+        featured: featured,
+        image: image
     });
 
     const token = getToken();
@@ -32,7 +32,7 @@ export async function addNewProduct(title, price, description, image, featured) 
         const json = await response.json();
 
         if (json.created_at) {
-            displayMessage("alert-success", `You added: ${title}`, ".message-container");
+            displayMessage("success", `You added: ${title}`, ".message-container");
 
             setTimeout(function() {
                 messageContainer.innerHTML = "";
@@ -44,6 +44,6 @@ export async function addNewProduct(title, price, description, image, featured) 
 
     } catch (error) {
         console.log(error);
-        displayMessage("alert-danger", "Something went wrong. Please try again.", ".message-container");
+        displayMessage("error", "Something went wrong. Please try again.", ".message-container");
     }
 }
