@@ -7,12 +7,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: white;
+    background-color: rgb(25, 25, 25);
     a {
-        color: black;
+        color: white;
         text-decoration: none;
     }
     .fa-bars {
+        color: white;
         font-size: 1.7em;
         cursor: pointer;
     }
@@ -20,9 +21,9 @@
 
 nav {
     display: none;
-    background-color: white;
+    background-color: rgb(25, 25, 25);
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -35,22 +36,70 @@ nav {
         transform: translate(-50%, -50%);
     }
     a {
+        color: white;
         font-size: 1.3em;
         text-align: center;
         padding: 10px 20px;
         margin: 10px;
         &:hover {
-            color: gray;
+            color: $primary-color;
         }
     }
     .active {
-        background-color: lighten($primary-color, 30%);
+        color: black;
+        background-color: lighten($primary-color, 40%);
         border-radius: 3px;
     }
     .fa-xmark {
+        color: white;
         font-size: 2em;
         float: inline-end;
         margin: 10px 20px;
         cursor: pointer;
+    }
+}
+
+@media all and (min-width: 650px) {
+    .menu {
+        padding: 20px;
+        .fa-bars {
+            display: none;
+        }
+    }
+    nav {
+        display: initial;
+        background-color: initial;
+        position: initial;
+        .menu__nav--links {
+            display: block;
+            position: initial;
+            top: initial;
+            left: initial;
+            transform: initial;
+        }
+        a {
+            font-size: 1em;
+            padding: 10px;
+        }
+        .fa-xmark {
+            display: none;
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+    nav {
+        a {
+            margin: 0 30px;
+        }
+    }
+}
+
+@media all and (min-width: 950px) {
+    nav {
+        a {
+            font-size: 1.2em;
+            margin: 0 40px;
+        }
     }
 }

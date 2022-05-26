@@ -5,7 +5,7 @@ import { productsUrl } from "./settings/api.js";
 import { createHtmlManage } from "./components/admin/createHtmlManage.js";
 import { submitNewProduct } from "./components/admin/submitNewProduct.js";
 import { doLogout } from "./components/admin/doLogOut.js";
-
+import { searchProducts } from "./components/admin/searchProducts.js";
 
 createMenu();
 
@@ -37,6 +37,7 @@ export async function displayProducts() {
         console.log(results);
 
         createHtmlManage(results);
+        searchProducts(results);
 
     } catch (error) {
         console.log(error);

@@ -29,12 +29,14 @@ export function createProductHtml(results) {
                                      <img src="${imageUrl}" alt="${results.image.alternativeText}">
                                   </div>
                                   <div class="product__info">
-                                      <h1>${results.title}</h1>
-                                      <p>${results.description}</p>
-                                      <p class="price">$${results.price}</p>
-                                      <div class="products__btn">
-                                        <button type="submit" id="addToCart" data-id="${results.id}" data-title="${results.title}" data-price="${results.price}" data-image="${results.image.url}" data-altText="${results.image.alternativeText}">${buttonText}</button>
-                                      </div>
+                                    <div>
+                                        <h1>${results.title}</h1>
+                                        <p>${results.description}</p>
+                                        <p class="price">$${results.price}</p>
+                                    </div>
+                                    <div class="products__btn">
+                                            <button type="submit" id="addToCart" data-id="${results.id}" data-title="${results.title}" data-price="${results.price}" data-image="${results.image.url}" data-altText="${results.image.alternativeText}">${buttonText}</button>
+                                    </div>
                                   </div>
                                   <div class="product__modal">
                                      <img src="${imageUrl}" alt="${results.image.alternativeText}">

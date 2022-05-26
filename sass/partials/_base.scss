@@ -8,6 +8,7 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
     min-height: 100vh;
+    background: #ededed;
     a {
         text-decoration: none;
         color: black;
@@ -16,12 +17,14 @@ body {
 
 main {
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 footer {
     display: flex;
     justify-content: space-around;
-    background-color: lightgray;
+    background-color: rgb(25, 25, 25);
+    color: white;
     padding: 50px 0;
     p {
         margin: 0;
@@ -31,4 +34,10 @@ footer {
 .title {
     text-align: center;
     margin: 50px auto;
+}
+
+@media all and (min-width: 650px) {
+    main {
+        margin-top: 70px;
+    }
 }

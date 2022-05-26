@@ -29,51 +29,54 @@
             </div>
         </div>
 
-        <div class="admin">
 
-            <div class="products">
-                <div class="products__container--add">
-                    <h2>Add products</h2>
-                    <div class="message-container"></div>
-                    <form>
-                        <div>
-                            <label for="title">Title</label>
-                            <input type="text" id="title">
-                        </div>
+        <div class="products__admin">
+            <div class="products__container--add">
+                <h2>Add products</h2>
+                <div class="message-container"></div>
+                <form>
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" id="title">
+                    </div>
 
-                        <div>
-                            <label for="price">Price</label>
-                            <input type="number" id="price">
-                        </div>
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="number" id="price">
+                    </div>
 
-                        <div>
-                            <label for="description">Description</label>
-                            <textarea id="description" placeholder="..."></textarea>
-                        </div>
+                    <div>
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="..."></textarea>
+                    </div>
 
-                        <div>
-                            <label for="imageUrl">Image url</label>
-                            <input type="text" id="imageUrl">
-                        </div>
+                    <div>
+                        <label for="imageUrl">Image url</label>
+                        <input type="text" id="imageUrl">
+                    </div>
 
-                        <div class="isFeatured">
-                            <p>Is the product featured?</p>
-                            <label for="featured">
+                    <div class="isFeatured">
+                        <p>Is the product featured?</p>
+                        <label for="featured">
                                 <input type="checkbox" id="featured">
                                 <span class="checkbox"></span>
                             </label>
-                        </div>
-                        <div class="btn__container">
-                            <button type="submit" id="addNewBtn">Add</button>
-                        </div>
-                    </form>
-                </div>
-
-                <h2>Manage products</h2>
-                <div class="products__container--manage"></div>
+                    </div>
+                    <div class="btn__container">
+                        <button type="submit" id="addNewBtn">Add</button>
+                    </div>
+                </form>
             </div>
 
+            <div class="manage">
+                <h2>Manage products</h2>
+                <div class="products__searchField">
+                    <input type="text" id="adminSearch" placeholder="Search product">
+                </div>
+                <div class="products__container--manage"></div>
+            </div>
         </div>
+
     </main>
 
     <footer>

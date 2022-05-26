@@ -1,32 +1,41 @@
 //Home page - header
 .banner {
-    text-align: center;
-    max-height: 750px;
-    overflow: hidden;
+    display: flex;
+    place-content: center;
+    background-color: $primary-color;
+    border-radius: 0 0 0 100%;
     img {
-        margin-top: -30px;
+        height: 400px;
         width: 100%;
-        max-width: 1400px;
+        object-fit: cover;
+        border-radius: 0 0 200% 0;
     }
 }
 
 //Home page - Intro
 .intro {
     text-align: center;
-    margin: 50px 10px;
+    margin: 0 10px 100px;
+    .btn__container {
+        margin-top: 30px;
+    }
 }
 
 //Home page - Featured
 .featured {
-    margin: 50px 10px;
-    h2,
+    width: 90%;
+    margin: 100px auto;
+    text-align: center;
+    h2 {
+        font-size: 2em;
+    }
     h3 {
-        text-align: center;
         margin: 0;
     }
     .featured__products {
         display: flex;
         overflow-y: scroll;
+        justify-content: space-between;
         .featured__products--item {
             margin: 10px;
             border-radius: 3px;
@@ -57,18 +66,206 @@
 
 //Home page - Adds
 .adds {
-    margin: 50px 10px;
-    text-align: center;
+    .adds__discount,
+    .adds__newsletter,
+    .adds__brand {
+        display: flex;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        margin: 50px 5px;
+        transition: 1s ease;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
     .adds__discount {
-        background-color: $primary-color;
-        padding: 50px 0;
+        background-color: $secondary-color;
+        border-radius: 40% 5px 5px 40%;
+        &:hover {
+            border-radius: 5px 40% 40% 5px;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-style: italic;
+            margin: 0 auto;
+            animation: color 5s infinite ease;
+        }
+        @keyframes color {
+            4% {
+                margin-bottom: 30px;
+            }
+            8% {
+                margin-bottom: 0px;
+            }
+            12% {
+                margin-bottom: 20px;
+            }
+            16% {
+                margin-bottom: 0px;
+            }
+            20% {
+                margin-bottom: 10px;
+            }
+            24% {
+                margin-bottom: 0px;
+            }
+        }
     }
     .adds__newsletter {
-        background-color: $secondary-color;
-        padding: 50px 0;
+        justify-content: end;
+        background-image: url("/image/addGreen.jpg");
+        background-position-x: left 15%;
+        border-radius: 40% 5px 5px 40%;
+        &:hover {
+            border-radius: 5px 40% 40% 5px;
+        }
+        h3 {
+            margin-right: 10%;
+        }
     }
     .adds__brand {
-        background-color: $tertiary-color;
-        padding: 50px 0;
+        background-image: url("/image/addRunner.jpg");
+        background-position-x: right 15%;
+        border-radius: 5px 40% 40% 5px;
+        &:hover {
+            border-radius: 40% 5px 5px 40%;
+        }
+        h3 {
+            margin-left: 10%;
+        }
+    }
+}
+
+@media all and (min-width: 530px) {
+    //Home page - header
+    .banner {
+        img {
+            height: 500px;
+        }
+    }
+    //Home page - Adds
+    .adds {
+        .adds__brand {
+            h3 {
+                margin-left: 15%;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 650px) {
+    //Home page - header
+    .banner {
+        img {
+            height: 550px;
+        }
+    }
+    //Home page - Featured
+    .featured {
+        width: 80%;
+    }
+    //Home page - Adds
+    .adds {
+        h3 {
+            font-size: 2em;
+        }
+        .adds__brand {
+            h3 {
+                margin-left: 25%;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+    //Home page - header
+    .banner {
+        img {
+            height: 600px;
+        }
+    }
+    //Home page - Adds
+    .adds {
+        .adds__discount {
+            border-radius: 150px 10px 10px 150px;
+            &:hover {
+                border-radius: 10px 150px 150px 10px;
+            }
+        }
+        .adds__newsletter {
+            border-radius: 150px 10px 10px 150px;
+            &:hover {
+                border-radius: 10px 150px 150px 10px;
+            }
+            h3 {
+                margin-right: 15%;
+            }
+        }
+        .adds__brand {
+            border-radius: 10px 150px 150px 10px;
+            background-position-x: right;
+            &:hover {
+                border-radius: 150px 10px 10px 150px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 950px) {
+    //Home page - header
+    .banner {
+        img {
+            height: 750px;
+        }
+    }
+    //Home page - Featured
+    .featured {
+        .featured__products--item {
+            margin: 0 50px;
+        }
+    }
+    //Home page - Adds
+    .adds {
+        h3 {
+            font-size: 2.5em;
+        }
+        .adds__discount,
+        .adds__newsletter,
+        .adds__brand {
+            &:hover {
+                border-radius: 10px;
+            }
+        }
+        .adds__discount {
+            height: 250px;
+            border-radius: 10px;
+        }
+        .adds__newsletter {
+            max-width: 1300px;
+            margin-right: 10px;
+            margin-left: auto;
+            h3 {
+                margin-right: 25%;
+            }
+        }
+        .adds__brand {
+            max-width: 1300px;
+            margin-right: auto;
+            margin-left: 10px;
+            h3 {
+                margin-left: 35%;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    //Home page - header
+    .banner {
+        img {
+            height: 850px;
+        }
     }
 }

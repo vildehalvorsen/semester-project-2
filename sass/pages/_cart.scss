@@ -16,8 +16,9 @@
         border: 1px solid black;
         border-radius: 3px;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
+        background-color: white;
         padding: 10px;
-        margin: 5px auto;
+        margin: 0 auto 10px;
         img {
             width: 70px;
             height: 70px;
@@ -50,8 +51,9 @@
     border: 1px solid black;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
+    background-color: white;
     width: 350px;
-    margin: 50px auto 100px;
+    margin: 50px auto;
     padding: 20px;
     h2 {
         text-align: center;
@@ -73,6 +75,32 @@
         text-align: right;
         p {
             font-weight: bold;
+        }
+    }
+}
+
+.checkout {
+    display: flex;
+    place-content: center;
+}
+
+@media all and (min-width: 900px) {
+    .cart__container {
+        display: flex;
+        max-width: 1100px;
+        margin: 100px auto;
+        .cart,
+        .summary {
+            margin: 0px auto;
+        }
+        .summary {
+            max-height: 300px;
+            .summary__info {
+                .summary__info--products {
+                    max-height: 200px;
+                    overflow-x: scroll;
+                }
+            }
         }
     }
 }
