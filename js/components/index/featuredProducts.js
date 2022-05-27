@@ -27,7 +27,6 @@ export async function getFeaturedProducts() {
                                                 </a>`
             }
         }
-
     } catch (error) {
         console.log(error);
     }

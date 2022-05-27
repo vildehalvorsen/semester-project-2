@@ -30,13 +30,12 @@ body a {
 }
 
 body p,
+body a,
 body label,
 body input,
 body textarea,
-body button,
-body .button,
 body .message-container {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -47,7 +46,7 @@ main {
 footer {
   display: flex;
   justify-content: space-around;
-  background-color: #191919;
+  background-color: #262626;
   color: white;
   padding: 50px 0;
 }
@@ -65,6 +64,21 @@ footer p {
   main {
     margin-top: 70px;
   }
+  h1 {
+    font-size: 2.3em;
+  }
+}
+
+@media all and (min-width: 800px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  h1 {
+    font-size: 3em;
+  }
 }
 
 .menu {
@@ -80,7 +94,7 @@ footer p {
 }
 
 .menu a {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   text-decoration: none;
 }
@@ -111,7 +125,7 @@ nav .menu__nav--links {
 }
 
 nav a {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   font-size: 1.3em;
   text-align: center;
@@ -120,13 +134,17 @@ nav a {
 }
 
 nav a:hover {
-  color: #ff00fb;
+  color: #ffb331;
 }
 
 nav .active {
   color: black;
-  background-color: #ffccfe;
+  background-color: #0079a8;
   border-radius: 3px;
+}
+
+nav .active:hover {
+  color: white;
 }
 
 nav .fa-xmark {
@@ -160,6 +178,14 @@ nav .fa-xmark {
     font-size: 1em;
     padding: 10px;
   }
+  nav .active {
+    color: white;
+    background-color: initial;
+    text-decoration: underline;
+  }
+  nav .active:hover {
+    color: #ffb331;
+  }
   nav .fa-xmark {
     display: none;
   }
@@ -177,10 +203,24 @@ nav .fa-xmark {
   }
 }
 
+.menu__logo img,
+footer img {
+  height: 20px;
+}
+
+@media all and (min-width: 800px) {
+  .menu__logo img,
+  footer img {
+    height: 25px;
+  }
+}
+
 .button,
 button {
-  font-size: 11pt;
-  background-color: #ff00fb;
+  font-family: "Roboto";
+  font-size: 13pt;
+  background-color: #005475;
+  color: white;
   border: none;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
@@ -194,15 +234,28 @@ button {
 button:hover {
   padding: 5px 50px;
   margin: 5px auto;
-  background-color: #ff66fd;
+  background-color: #0079a8;
 }
 
 .danger {
-  background-color: red;
+  background-color: #ba0000;
 }
 
 .danger:hover {
-  background-color: #ff6666;
+  background-color: #ed0000;
+}
+
+@media all and (min-width: 800px) {
+  .button,
+  button {
+    font-size: 15pt;
+    padding: 10px 50px;
+    min-width: 163px;
+  }
+  .button:hover,
+  button:hover {
+    padding: 5px 70px;
+  }
 }
 
 .loader {
@@ -214,7 +267,7 @@ button:hover {
 
 .loader .fa-spinner {
   font-size: 2.5em;
-  color: #279c00;
+  color: #ffb331;
 }
 
 @keyframes loader {
@@ -237,7 +290,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border: 3px solid #279c00;
+  border: 3px solid #ffb331;
   outline: none;
 }
 
@@ -258,7 +311,7 @@ textarea {
 }
 
 .isFeatured input:checked ~ .checkbox {
-  background-color: #7cff7c;
+  background-color: #7cb9ff;
 }
 
 .isFeatured input:checked ~ .checkbox::after {
@@ -266,14 +319,14 @@ textarea {
 }
 
 .isFeatured input:checked ~ .checkbox:hover {
-  background-color: #b6ffb6;
+  background-color: #afd4ff;
 }
 
 .isFeatured .checkbox {
   height: 30px;
   width: 40px;
-  border: 2px solid black;
-  border-radius: 1px;
+  border: 1px solid black;
+  border-radius: 3px;
   background-color: #b1b1b1;
   text-align: center;
   padding: 5px;
@@ -285,7 +338,7 @@ textarea {
 }
 
 .isFeatured .checkbox:hover {
-  background-color: #ccc;
+  background-color: #cbcbcb;
 }
 
 .message-container {
@@ -295,22 +348,22 @@ textarea {
 }
 
 .message-container .success {
-  background-color: #68ff36;
-  border: 2px solid #279c00;
+  background-color: #9bd289;
+  border: 2px solid #4b8c36;
   border-radius: 3px;
   padding: 10px;
 }
 
 .message-container .warning {
-  background-color: #ffcc66;
-  border: 2px solid #ffaa00;
+  background-color: #ffd454;
+  border: 2px solid #edb200;
   border-radius: 3px;
   padding: 10px;
 }
 
 .message-container .error {
-  background-color: #ff6666;
-  border: 2px solid red;
+  background-color: #ff2121;
+  border: 2px solid #ba0000;
   border-radius: 3px;
   padding: 10px;
 }
@@ -318,7 +371,7 @@ textarea {
 .banner {
   display: flex;
   place-content: center;
-  background-color: #ff00fb;
+  background-color: #005475;
   border-radius: 0 0 0 100%;
 }
 
@@ -334,23 +387,23 @@ textarea {
   margin: 0 10px 100px;
 }
 
+.intro h1 {
+  font-style: italic;
+}
+
 .intro p {
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
 }
 
 .intro .btn__container {
-  margin-top: 30px;
+  margin: 40px;
 }
 
 .featured {
   width: 90%;
   margin: 100px auto;
   text-align: center;
-}
-
-.featured h2 {
-  font-size: 2em;
 }
 
 .featured h3 {
@@ -366,7 +419,7 @@ textarea {
 .featured .featured__products .featured__products--item {
   margin: 10px;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
 }
 
 .featured .featured__products .featured__products--item:hover .featured__products--overlay {
@@ -386,10 +439,15 @@ textarea {
 .featured .featured__products .featured__products--overlay {
   opacity: 0;
   margin-top: -22px;
-  background-color: gray;
+  background-color: #ffb331;
   width: 300px;
   transition: .5s ease-in;
   border-radius: 3px;
+}
+
+.featured .featured__products .featured__products--overlay h3 {
+  font-family: "Anybody";
+  font-size: 1.5em;
 }
 
 .adds .adds__discount,
@@ -405,14 +463,14 @@ textarea {
 }
 
 .adds h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Anybody", sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .adds .adds__discount {
-  background-color: #279c00;
+  background-color: #ffb331;
   border-radius: 40% 5px 5px 40%;
 }
 
@@ -421,8 +479,7 @@ textarea {
 }
 
 .adds .adds__discount h3 {
-  font-family: "Anybody", sans-serif;
-  font-weight: 700;
+  font-size: 2em;
   text-transform: uppercase;
   margin: 0 auto;
   animation: color 5s infinite ease;
@@ -451,7 +508,7 @@ textarea {
 
 .adds .adds__newsletter {
   justify-content: end;
-  background-image: url("/image/addGreen.jpg");
+  background-image: url("/image/addBlue.jpg");
   background-position-x: left 15%;
   border-radius: 40% 5px 5px 40%;
 }
@@ -461,11 +518,13 @@ textarea {
 }
 
 .adds .adds__newsletter h3 {
-  margin-right: 10%;
+  margin-right: 25px;
+  background-color: white;
+  padding: 5px;
 }
 
 .adds .adds__brand {
-  background-image: url("/image/addRunner.jpg");
+  background-image: url("/image/addRunnerOrange.jpg");
   background-position-x: right 15%;
   border-radius: 5px 40% 40% 5px;
 }
@@ -475,15 +534,26 @@ textarea {
 }
 
 .adds .adds__brand h3 {
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 @media all and (min-width: 530px) {
   .banner img {
     height: 500px;
   }
+  .intro {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+  }
+  .intro p {
+    width: 420px;
+    margin: 0 auto;
+  }
+  .adds .adds__newsletter h3 {
+    margin-right: 10%;
+  }
   .adds .adds__brand h3 {
-    margin-left: 15%;
+    margin-left: 25%;
   }
 }
 
@@ -491,14 +561,17 @@ textarea {
   .banner img {
     height: 550px;
   }
+  .intro p {
+    width: 500px;
+  }
   .featured {
     width: 80%;
   }
-  .adds h3 {
+  .featured h2 {
     font-size: 2em;
   }
-  .adds .adds__brand h3 {
-    margin-left: 25%;
+  .adds .adds__newsletter h3 {
+    margin-right: 15%;
   }
 }
 
@@ -519,7 +592,7 @@ textarea {
     border-radius: 10px 150px 150px 10px;
   }
   .adds .adds__newsletter h3 {
-    margin-right: 15%;
+    margin-right: 20%;
   }
   .adds .adds__brand {
     border-radius: 10px 150px 150px 10px;
@@ -533,6 +606,10 @@ textarea {
 @media all and (min-width: 950px) {
   .banner img {
     height: 750px;
+  }
+  .intro p {
+    font-size: 1.8em;
+    margin: 30px auto;
   }
   .featured .featured__products--item {
     margin: 0 50px;
@@ -548,6 +625,9 @@ textarea {
   .adds .adds__discount {
     height: 250px;
     border-radius: 10px;
+  }
+  .adds .adds__discount h3 {
+    font-size: 3em;
   }
   .adds .adds__newsletter {
     max-width: 1300px;
@@ -619,6 +699,10 @@ textarea {
   padding: 0 10px;
 }
 
+.products__container .products__item .products__item--info h3 {
+  font-weight: bolder;
+}
+
 .products__container .products__item:hover {
   transform: scale(1.05);
 }
@@ -687,7 +771,7 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 0, 251, 0.9);
+  background-color: rgba(237, 237, 237, 0.9);
   cursor: pointer;
 }
 
@@ -810,9 +894,9 @@ textarea {
 
 .products__admin .manage .products__container--manage .products__item {
   width: 150px;
-  max-height: 100%;
+  max-height: 210px;
   border-radius: 3px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
   margin: 20px;
 }
 
@@ -981,7 +1065,7 @@ textarea {
 }
 
 .cart .cart__item--info .fa-trash-can:hover {
-  color: #ffaa00;
+  color: #edb200;
   cursor: pointer;
 }
 
@@ -1071,7 +1155,7 @@ textarea {
 .logIn form #passwordError {
   display: none;
   margin: -10px auto 10px;
-  color: red;
+  color: #ba0000;
   font-size: .9em;
 }
 

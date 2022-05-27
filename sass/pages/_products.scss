@@ -35,6 +35,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 10px;
+            h3 {
+                font-weight: bolder;
+            }
         }
         &:hover {
             transform: scale(1.05);

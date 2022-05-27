@@ -14,7 +14,9 @@ export default function createMenu() {
 
     const menuContainer = document.querySelector(".menu");
     menuContainer.innerHTML = `<div class="menu__logo">
-                                    <a href="/">BRAND</a>
+                                    <a href="/">
+                                        <img src="/image/logo.png" alt="logo" />
+                                    </a>
                                 </div>
                                 
                                 <div class=""menu__nav-open>

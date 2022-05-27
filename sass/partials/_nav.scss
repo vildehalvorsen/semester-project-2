@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(25, 25, 25);
+    background-color: $theme-black;
     a {
         font-family: $link-font, sans-serif;
         color: white;
@@ -22,7 +22,7 @@
 
 nav {
     display: none;
-    background-color: rgb(25, 25, 25);
+    background-color: $theme-black;
     position: fixed;
     top: 0;
     left: 0;
@@ -44,13 +44,16 @@ nav {
         padding: 10px 20px;
         margin: 10px;
         &:hover {
-            color: $primary-color;
+            color: $secondary-color;
         }
     }
     .active {
         color: black;
-        background-color: lighten($primary-color, 40%);
+        background-color: lighten($primary-color, 10%);
         border-radius: 3px;
+        &:hover {
+            color: white;
+        }
     }
     .fa-xmark {
         color: white;
@@ -82,6 +85,14 @@ nav {
         a {
             font-size: 1em;
             padding: 10px;
+        }
+        .active {
+            color: white;
+            background-color: initial;
+            text-decoration: underline;
+            &:hover {
+                color: $secondary-color;
+            }
         }
         .fa-xmark {
             display: none;

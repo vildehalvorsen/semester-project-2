@@ -6,7 +6,6 @@ export function searchProducts(products) {
 
     searchInput.onkeyup = function() {
         const searchTitle = event.target.value.trim().toLowerCase();
-        const searchDescription = event.target.value.toLowerCase();
 
         const filteredProducts = products.filter(product => {
             if (product.title.toLowerCase().includes(searchTitle)) {

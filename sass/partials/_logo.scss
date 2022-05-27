@@ -1,0 +1,15 @@
+.menu__logo,
+footer {
+    img {
+        height: 20px;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .menu__logo,
+    footer {
+        img {
+            height: 25px;
+        }
+    }
+}

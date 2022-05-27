@@ -13,6 +13,6 @@ export async function displayProducts() {
 
     } catch (error) {
         console.log(error);
-        displayMessage("alert-warning", "Something happened trying to call the API", ".products");
+        displayMessage("warning", "Something happened trying to call the API", ".products");
     }
 }

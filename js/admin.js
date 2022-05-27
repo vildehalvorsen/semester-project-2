@@ -21,7 +21,6 @@ if (username) {
     heading.innerHTML = `Hi ${username}`;
 }
 
-
 const logOutBtn = document.querySelector("#logOutBtn");
 logOutBtn.addEventListener("click", doLogout);
 

@@ -17,7 +17,7 @@ export function createHtml(results) {
                                                 <img src="${imageUrl}" alt="${results[i].image.alternativeText}">
                                                 <div class="products__item--info">
                                                     <h3>${results[i].title}</h3>
-                                                    <p>$ ${results[i].price}</p>
+                                                    <p class="price">$ ${results[i].price}</p>
                                                 </div>
                                             </div>
                                         </a>`;

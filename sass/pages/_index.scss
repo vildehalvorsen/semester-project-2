@@ -16,12 +16,15 @@
 .intro {
     text-align: center;
     margin: 0 10px 100px;
+    h1 {
+        font-style: italic;
+    }
     p {
         font-family: $secondary-heading, sans-serif;
         font-size: 1.5em;
     }
     .btn__container {
-        margin-top: 30px;
+        margin: 40px;
     }
 }
 
@@ -30,9 +33,6 @@
     width: 90%;
     margin: 100px auto;
     text-align: center;
-    h2 {
-        font-size: 2em;
-    }
     h3 {
         margin: 0;
     }
@@ -43,7 +43,7 @@
         .featured__products--item {
             margin: 10px;
             border-radius: 3px;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
             &:hover .featured__products--overlay {
                 opacity: 1;
                 margin-top: -300px;
@@ -60,10 +60,14 @@
         .featured__products--overlay {
             opacity: 0;
             margin-top: -22px;
-            background-color: gray;
+            background-color: $secondary-color;
             width: 300px;
             transition: .5s ease-in;
             border-radius: 3px;
+            h3 {
+                font-family: $primary-heading;
+                font-size: 1.5em;
+            }
         }
     }
 }
@@ -82,10 +86,10 @@
         transition: 1s ease;
     }
     h3 {
-        font-family: $secondary-heading, sans-serif;
+        font-family: $adds-font, sans-serif;
         font-weight: 700;
         font-style: italic;
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     .adds__discount {
         background-color: $secondary-color;
@@ -94,8 +98,7 @@
             border-radius: 5px 40% 40% 5px;
         }
         h3 {
-            font-family: $adds-font, sans-serif;
-            font-weight: 700;
+            font-size: 2em;
             text-transform: uppercase;
             margin: 0 auto;
             animation: color 5s infinite ease;
@@ -123,25 +126,27 @@
     }
     .adds__newsletter {
         justify-content: end;
-        background-image: url("/image/addGreen.jpg");
+        background-image: url("/image/addBlue.jpg");
         background-position-x: left 15%;
         border-radius: 40% 5px 5px 40%;
         &:hover {
             border-radius: 5px 40% 40% 5px;
         }
         h3 {
-            margin-right: 10%;
+            margin-right: 25px;
+            background-color: white;
+            padding: 5px;
         }
     }
     .adds__brand {
-        background-image: url("/image/addRunner.jpg");
+        background-image: url("/image/addRunnerOrange.jpg");
         background-position-x: right 15%;
         border-radius: 5px 40% 40% 5px;
         &:hover {
             border-radius: 40% 5px 5px 40%;
         }
         h3 {
-            margin-left: 10%;
+            margin-left: 15%;
         }
     }
 }
@@ -153,11 +158,25 @@
             height: 500px;
         }
     }
+    //Home page - Intro
+    .intro {
+        max-width: 1000px;
+        margin: 0 auto 100px;
+        p {
+            width: 420px;
+            margin: 0 auto;
+        }
+    }
     //Home page - Adds
     .adds {
+        .adds__newsletter {
+            h3 {
+                margin-right: 10%;
+            }
+        }
         .adds__brand {
             h3 {
-                margin-left: 15%;
+                margin-left: 25%;
             }
         }
     }
@@ -170,18 +189,24 @@
             height: 550px;
         }
     }
+    //Home page - Intro
+    .intro {
+        p {
+            width: 500px;
+        }
+    }
     //Home page - Featured
     .featured {
         width: 80%;
+        h2 {
+            font-size: 2em;
+        }
     }
     //Home page - Adds
     .adds {
-        h3 {
-            font-size: 2em;
-        }
-        .adds__brand {
+        .adds__newsletter {
             h3 {
-                margin-left: 25%;
+                margin-right: 15%;
             }
         }
     }
@@ -208,7 +233,7 @@
                 border-radius: 10px 150px 150px 10px;
             }
             h3 {
-                margin-right: 15%;
+                margin-right: 20%;
             }
         }
         .adds__brand {
@@ -226,6 +251,13 @@
     .banner {
         img {
             height: 750px;
+        }
+    }
+    //Home page - Intro
+    .intro {
+        p {
+            font-size: 1.8em;
+            margin: 30px auto;
         }
     }
     //Home page - Featured
@@ -249,6 +281,9 @@
         .adds__discount {
             height: 250px;
             border-radius: 10px;
+            h3 {
+                font-size: 3em;
+            }
         }
         .adds__newsletter {
             max-width: 1300px;
