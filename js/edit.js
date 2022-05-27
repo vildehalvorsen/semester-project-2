@@ -33,6 +33,9 @@ form.addEventListener("submit", submitUpdate);
 
         document.title = `Edit | ${details.title}`;
 
+        const breadcrumbContainer = document.querySelector(".breadcrumb");
+        breadcrumbContainer.innerHTML += `<p class="active">${details.title}</p>`;
+
         title.value = details.title;
         price.value = details.price;
         description.value = details.description;

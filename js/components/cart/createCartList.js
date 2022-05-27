@@ -6,12 +6,14 @@ import { deleteButton } from "./deleteButton.js";
 export function createCartList() {
     const products = getFromStorage("cart");
     const productsContainer = document.querySelector(".cart");
+    const checkoutBtn = document.querySelector(".checkout");
 
     productsContainer.innerHTML = "";
 
     if (products.length === 0) {
         productsContainer.innerHTML = `<p>There are currently no items in your cart...</p>
                                         <a href="/products.html" class="button">Go shopping!</a>`;
+        checkoutBtn.style.display = "none";
     }
 
     products.forEach(product => {

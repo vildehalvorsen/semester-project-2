@@ -2,6 +2,19 @@
   box-sizing: border-box;
 }
 
+h1,
+h2 {
+  font-family: "Anybody", sans-serif;
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 body {
   margin: 0;
   display: grid;
@@ -14,6 +27,16 @@ body {
 body a {
   text-decoration: none;
   color: black;
+}
+
+body p,
+body label,
+body input,
+body textarea,
+body button,
+body .button,
+body .message-container {
+  font-family: "Open Sans", sans-serif;
 }
 
 main {
@@ -57,6 +80,7 @@ footer p {
 }
 
 .menu a {
+  font-family: "Open Sans", sans-serif;
   color: white;
   text-decoration: none;
 }
@@ -87,6 +111,7 @@ nav .menu__nav--links {
 }
 
 nav a {
+  font-family: "Open Sans", sans-serif;
   color: white;
   font-size: 1.3em;
   text-align: center;
@@ -148,7 +173,6 @@ nav .fa-xmark {
 
 @media all and (min-width: 950px) {
   nav a {
-    font-size: 1.2em;
     margin: 0 40px;
   }
 }
@@ -249,7 +273,7 @@ textarea {
   height: 30px;
   width: 40px;
   border: 2px solid black;
-  border-radius: 3px;
+  border-radius: 1px;
   background-color: #b1b1b1;
   text-align: center;
   padding: 5px;
@@ -266,6 +290,7 @@ textarea {
 
 .message-container {
   text-align: center;
+  width: 100%;
   margin: 10px auto;
 }
 
@@ -307,6 +332,11 @@ textarea {
 .intro {
   text-align: center;
   margin: 0 10px 100px;
+}
+
+.intro p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
 }
 
 .intro .btn__container {
@@ -375,6 +405,9 @@ textarea {
 }
 
 .adds h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
   font-size: 1.5em;
 }
 
@@ -388,8 +421,9 @@ textarea {
 }
 
 .adds .adds__discount h3 {
+  font-family: "Anybody", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
-  font-style: italic;
   margin: 0 auto;
   animation: color 5s infinite ease;
 }
@@ -504,7 +538,7 @@ textarea {
     margin: 0 50px;
   }
   .adds h3 {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
   .adds .adds__discount:hover,
   .adds .adds__newsletter:hover,
@@ -535,7 +569,7 @@ textarea {
 
 @media all and (min-width: 1400px) {
   .banner img {
-    height: 850px;
+    height: 825px;
   }
 }
 
@@ -544,7 +578,7 @@ textarea {
 }
 
 .adds.products .adds__discount.products {
-  margin: 0 5px;
+  margin: -15px 0 0;
   height: 150px;
   border-radius: 5px;
 }
@@ -754,6 +788,7 @@ textarea {
 .products__admin .products__container--add form textarea,
 .products__admin .products__container--add form .isFeatured {
   width: 260px;
+  max-width: 260px;
 }
 
 .products__admin .products__container--add .btn__container {
@@ -775,16 +810,10 @@ textarea {
 
 .products__admin .manage .products__container--manage .products__item {
   width: 150px;
-  max-height: 202px;
+  max-height: 100%;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
   margin: 20px;
-}
-
-.products__admin .manage .products__container--manage .products__item h3,
-.products__admin .manage .products__container--manage .products__item p {
-  font-size: .9em;
-  margin: 5px auto;
 }
 
 .products__admin .manage .products__container--manage .products__item img {
@@ -796,6 +825,13 @@ textarea {
 
 .products__admin .manage .products__container--manage .products__item .products__item--info {
   text-align: center;
+}
+
+.products__admin .manage .products__container--manage .products__item .products__item--info h3,
+.products__admin .manage .products__container--manage .products__item .products__item--info p {
+  word-wrap: break-word;
+  font-size: .9em;
+  margin: 5px auto;
 }
 
 .products__admin .manage .products__container--manage .products__item:hover {
@@ -844,8 +880,23 @@ textarea {
 }
 
 .editProduct {
-  width: 250px;
+  width: 300px;
   margin: 50px auto;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 0px;
+  padding: 20px;
+}
+
+.editProduct form {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.editProduct form input,
+.editProduct form textarea {
+  max-width: 250px;
+  margin-bottom: 10px;
 }
 
 .editProduct .btn__container {
@@ -856,6 +907,29 @@ textarea {
 
 .editProduct .btn__container button {
   margin: 5px auto;
+}
+
+@media all and (min-width: 500px) {
+  .editProduct {
+    width: 350px;
+    padding: 30px;
+  }
+  .editProduct form {
+    width: 260px;
+  }
+  .editProduct form input,
+  .editProduct form textarea,
+  .editProduct form .isFeatured {
+    width: 260px;
+    max-width: 260px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .editProduct {
+    width: 500px;
+    padding: 40px;
+  }
 }
 
 .cart {

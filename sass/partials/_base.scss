@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+//Fonts 
+h1,
+h2 {
+    font-family: $primary-heading, sans-serif;
+    font-weight: 700;
+}
+
+h3,
+h4,
+h5 {
+    font-family: $secondary-heading, sans-serif;
+    font-weight: 400;
+}
+
 body {
     margin: 0;
     display: grid;
@@ -12,6 +26,15 @@ body {
     a {
         text-decoration: none;
         color: black;
+    }
+    p,
+    label,
+    input,
+    textarea,
+    button,
+    .button,
+    .message-container {
+        font-family: $body-font, sans-serif;
     }
 }
 

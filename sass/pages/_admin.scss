@@ -26,6 +26,7 @@
             textarea,
             .isFeatured {
                 width: 260px;
+                max-width: 260px;
             }
         }
         .btn__container {
@@ -45,15 +46,10 @@
             justify-content: center;
             .products__item {
                 width: 150px;
-                max-height: 202px;
+                max-height: 100%;
                 border-radius: 3px;
                 box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
                 margin: 20px;
-                h3,
-                p {
-                    font-size: .9em;
-                    margin: 5px auto;
-                }
                 img {
                     border-radius: 3px;
                     width: 150px;
@@ -62,6 +58,12 @@
                 }
                 .products__item--info {
                     text-align: center;
+                    h3,
+                    p {
+                        word-wrap: break-word;
+                        font-size: .9em;
+                        margin: 5px auto;
+                    }
                 }
                 &:hover {
                     transform: scale(1.05);

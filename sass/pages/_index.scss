@@ -16,6 +16,10 @@
 .intro {
     text-align: center;
     margin: 0 10px 100px;
+    p {
+        font-family: $secondary-heading, sans-serif;
+        font-size: 1.5em;
+    }
     .btn__container {
         margin-top: 30px;
     }
@@ -78,6 +82,9 @@
         transition: 1s ease;
     }
     h3 {
+        font-family: $secondary-heading, sans-serif;
+        font-weight: 700;
+        font-style: italic;
         font-size: 1.5em;
     }
     .adds__discount {
@@ -87,8 +94,9 @@
             border-radius: 5px 40% 40% 5px;
         }
         h3 {
+            font-family: $adds-font, sans-serif;
+            font-weight: 700;
             text-transform: uppercase;
-            font-style: italic;
             margin: 0 auto;
             animation: color 5s infinite ease;
         }
@@ -229,7 +237,7 @@
     //Home page - Adds
     .adds {
         h3 {
-            font-size: 2.5em;
+            font-size: 2.3em;
         }
         .adds__discount,
         .adds__newsletter,
@@ -265,7 +273,7 @@
     //Home page - header
     .banner {
         img {
-            height: 850px;
+            height: 825px;
         }
     }
 }

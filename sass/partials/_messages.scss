@@ -1,5 +1,6 @@
 .message-container {
     text-align: center;
+    width: 100%;
     margin: 10px auto;
     .success {
         background-color: lighten($success-color, 30%);
