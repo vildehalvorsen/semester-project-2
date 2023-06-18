@@ -1,6 +1,5 @@
 # E-commerce website / Semester Project
-
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+# <img src="JSFCA_1.jpg" alt='screenshot laptop' height='300' style="clear: right" /> <img src="JSFCA_2.jpg" alt='screenshot laptop' height='300' />
 
 The semester project assignment was to make an e-commerce website and build a customer frontend with home, product list, product detail and cart pages, and an admin frontend with functionality to create, update and delete products. I used a school Strapi installation to populate the website.
 
