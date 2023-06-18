@@ -1,5 +1,5 @@
 # E-commerce website / Semester Project
-# <img src="JSFCA_1.jpg" alt='screenshot laptop' height='300' style="clear: right" /> <img src="JSFCA_2.jpg" alt='screenshot laptop' height='300' />
+# <img src="RUNZ_1.jpg" alt='screenshot laptop' height='300' style="clear: right" /> <img src="RUNZ_2.jpg" alt='screenshot laptop' height='300' />
 
 The semester project assignment was to make an e-commerce website and build a customer frontend with home, product list, product detail and cart pages, and an admin frontend with functionality to create, update and delete products. I used a school Strapi installation to populate the website.
 
