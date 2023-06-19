@@ -1,11 +1,11 @@
 # E-commerce website / Semester Project
-# <img src="RUNZ_1.jpg" alt='screenshot laptop' height='250' style="clear: right" /> <img src="RUNZ_2.jpg" alt='screenshot laptop' height='250' />
+# <img src="RUNZ_1.jpg" alt='screenshot laptop' height='200' style="clear: right" /> <img src="RUNZ_2.jpg" alt='screenshot laptop' height='200' />
 
 The semester project assignment was to make an e-commerce website and build a customer frontend with home, product list, product detail and cart pages, and an admin frontend with functionality to create, update and delete products. I used a school Strapi installation to populate the website.
 
 ## Description
 
-I used a school strapi api to populate the website. You may use your own local strapi installation or other api's, but then you must modify the BASE_URL, paths and endpoints to match the request.
+I used a school strapi api to populate the website, you can find it [here](https://github.com/vildehalvorsen/strapi-sp2). You may use your own local strapi installation or other api's, but then you must modify the BASE_URL, paths and endpoints to match the request.
 
 ### Customer section
 - The home page includes a banner and a list of featured products under 'Trending now' heading.
